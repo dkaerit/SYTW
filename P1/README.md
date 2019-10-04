@@ -49,4 +49,24 @@ Antes de entrar en cuestión, algo que resulta importante para no despistarnos e
 ```console
 $ sudo hostnamectl set-hostname <nuevo nombre>
 ```
+Luego, haciendo esto en las tres máquinas se debería tener tres sesiones de tipo parecidas a usuario@sytw_backend, usuario@sytw_bdd, usuario@sytw_proxy que son los nombres que en esta práctica se les dio.
+
+Ahora ya podemos centrarnos en modificar los ficheros de configuración. Entraremos en modo superusuario.
+```console
+$ sudo su
+```
+La contraseña será la misma que se usó al cambiar la password en el primer inicio de sesión. Es decir la misma que "usuario", en este caso.
+
+Editaremos con nano o con vi el fichero interfaces ubicado en /etc/network. Aunque sería una mayor comodidas montar por remoto el sistema de ficheros con ayuda de servicios como sshfs y usar nuestro editor de texto favorito, no obstante, la falta de permisos no nos dejarían editar este tipo de ficheros.
+```console
+nano /etc/network/interfaces
+```
+Y debería modificarse el fichero hasta tener algo como esto
+
+<p align="center">
+  <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/proxy_screen.png"/>
+</p>
+
+El dhcp que viene por defecto no lo tocamos, pero añadimos una entrada para el ens3 con la información dispuesta en el esquema del principio. Repetimos la misma mecánica en el resto de máquinas.
+
 
