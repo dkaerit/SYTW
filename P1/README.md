@@ -47,6 +47,6 @@ En realidad no tendría que venir marcado ya directamente la relación nic/ens, 
 ## Editando los ficheros de configuración de interfaces
 Antes de entrar en cuestión, algo que resulta importante para no despistarnos en las distintas sesiones es cambiar el hostname de las máquinas y así saber onde uno se encuentra en cada momento. El comando que usaremos para ello es:
 ```console
-$ sudo hostnamectl set-hostname linuxize
+$ sudo hostnamectl set-hostname <nuevo nombre>
 ```
 
