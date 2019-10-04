@@ -45,11 +45,11 @@ Si vamos a la página del iaas sección "/mismaquinas" se podrá acceder a un li
 En realidad no tendría que venir marcado ya directamente la relación nic/ens, pero en este caso ya se ha tomado la molestia de anotar, y así tenerlo siempre presente, a quién corresponde qué interfaz con la ayuda de tampermonkey, que no tiene que ver con esta práctica, pero con un script se puede modificar la vista del navegador para añadir más datos al hacer coincidir las mac que vemos con el comando ya mencionado para ver la información de las interfaces en la bash de debian.
 
 ## Editando los ficheros de configuración de interfaces
-Antes de entrar en cuestión, algo que resulta importante para no despistarnos en las distintas sesiones es cambiar el hostname de las máquinas y así saber onde uno se encuentra en cada momento. El comando que usaremos para ello es:
+Antes de entrar en cuestión, algo que resulta importante para no despistarnos en las distintas sesiones es cambiar el hostname de las máquinas y así saber donde uno se encuentra en cada momento. El comando que usaremos para ello es:
 ```console
 $ sudo hostnamectl set-hostname <nuevo nombre>
 ```
-Luego, haciendo esto en las tres máquinas se debería tener tres sesiones de tipo parecidas a usuario@sytw_backend, usuario@sytw_bdd, usuario@sytw_proxy que son los nombres que en esta práctica se les dio.
+Será necesario reiniciar la sesión para ver los cambios. Luego, haciendo esto en las tres máquinas se debería tener tres sesiones de tipo parecidas a usuario@sytw_backend, usuario@sytw_bdd, usuario@sytw_proxy que son los nombres que en esta práctica se les dio.
 
 Ahora ya podemos centrarnos en modificar los ficheros de configuración. Entraremos en modo superusuario.
 ```console
@@ -67,7 +67,17 @@ Y debería modificarse el fichero hasta tener algo como esto
   <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/proxy_screen.png"/>
 </p>
 
-El dhcp que viene por defecto no lo tocamos, pero añadimos una entrada para el ens3 con la información dispuesta en el esquema del principio. Repetimos la misma mecánica en el resto de máquinas.
+El dhcp que viene por defecto no lo tocamos, pero añadimos una entrada para el ens3 con la información dispuesta en el esquema del principio. Para cada interfaz modificada habrá que bajar dicha interfaz y levantarla (O sólo levantarla si ya está DOWN). Los comandos para estas dos órdenes son.
+```console
+$ ifdown <interfaz>
+$ ifup <interfaz>
+```
+Luego podemos verificar que todo anda en orden con el comando
+```console
+$ ifconfig
+```
+
+Repetimos la misma mecánica en el resto de máquinas.
 
 <p align="center">
   <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/screen_backend.png"/>
