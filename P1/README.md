@@ -9,6 +9,19 @@ Para ello se nos ha ofrecido un rango de IP que será el que usaremos para estab
 
 Una visual de lo que queremos conseguir es lo siguiente.
 
-![diagrama objetivo](https://github.com/monnizou/SYTW/blob/master/P1/imgs/diagram.png)
+
+<p align="center">
+  <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/diagram.png"/>
+</p>
 
 ## Creando las máquinas virtuales
+Nos dirigimos a la página del iaas de la universidad que es donde crearemos las tres máquinas. Un aso bastante sencillo pues se ofrece una plantilla de Debian y lo único que hay que hacer es especificar las interfaces de cada una de ellas.
+
+```
+Show advanced options -> General
+```
+Para el proxy seleccionamos un DOC1(nic1) y un DOCINT1(nic2)
+Para el backend seleccionamos un DOCINT1(nic2) y un DOCINT(nic1)
+Para el backend únicamente agregamos una interfaz, pues sólo estara conectado al backend, ésta será DOCINT2(nic1)
+
+Esto se hace para el DOCINT de cada máquina quede emparejado sin aportar ningún error.
