@@ -86,3 +86,4 @@ Repetimos la misma mecánica en el resto de máquinas.
   <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/screen_bdd.png"/>
 </p>
 
+Al final deberíamos poder hacer ping entre el proxy y el backend y entre el backend y la base de datos sin nigún problema. Si esto no es posible puede deberse a algun dato mal indicado en los ficheros de configuración o simplemente no se llegaron a reiniciar correctamente los servicios de red con los nuevos datos
