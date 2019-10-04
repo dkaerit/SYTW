@@ -5,4 +5,4 @@ Para ello se nos ha ofrecido un rango de IP que será el que usaremos para estab
 
 Una visual de lo que queremos conseguir es lo siguiente.
 
-!(https://github.com/monnizou/SYTW/blob/master/P1/diagram.png)
+![diagrama objetivo](https://github.com/monnizou/SYTW/blob/master/P1/diagram.png)
