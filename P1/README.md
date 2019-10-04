@@ -24,4 +24,17 @@ Show advanced options -> General
 - Para el backend seleccionamos un DOCINT1(nic2) y un DOCINT(nic1)
 - Para el backend únicamente agregamos una interfaz, pues sólo estara conectado al backend, ésta será DOCINT2(nic1)
 
-Esto se hace para el DOCINT de cada máquina quede emparejado sin aportar ningún error.
+*Esto se hace para el DOCINT de cada máquina quede emparejado sin aportar ningún error.*
+
+Ahora entramos en cada una de las máquinas y configuraremos sus interfaces. Para saber el estado de las mismas usamos el comando
+```
+ip a
+```
+<p align="center">
+  <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/captu1.png"/>
+</p>
+Aquí vemos que hay 3 interfaces habilitadas, el loopback, que no lo tocaremos el ens3 y el ens6 (en la captura se ven que están activas porque ya las levanté al realizar la práctica, pero inicialmente estará una de ellas baja sin IP asignada). 
+
+Otro dato importante es que no sabemos a qué interfaz se refiere cada una de las que ahí muestra pues nosotros teníamos entendido su nombre por nic1, nic2, etc. Lo que podemos hacer es mirar la mac de cada una de esas interfaces y hacerlas coincidir para saber cual es cual. 
+
+Si vamos a la página del iaas sección "/mismaquinas" se podrá acceder a un listado de todas las máquinas habilitadas y datos como la mac y la IP de cada una de esas interfaces.
