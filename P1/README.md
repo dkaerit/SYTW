@@ -59,7 +59,7 @@ La contraseña será la misma que se usó al cambiar la password en el primer in
 
 Editaremos con nano o con vi el fichero interfaces ubicado en /etc/network. Aunque sería una mayor comodidas montar por remoto el sistema de ficheros con ayuda de servicios como sshfs y usar nuestro editor de texto favorito, no obstante, la falta de permisos no nos dejarían editar este tipo de ficheros.
 ```console
-nano /etc/network/interfaces
+$ nano /etc/network/interfaces
 ```
 Y debería modificarse el fichero hasta tener algo como esto
 
