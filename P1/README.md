@@ -39,7 +39,7 @@ Otro dato importante es que no sabemos a qué interfaz se refiere cada una de la
 
 Si vamos a la página del iaas sección "/mismaquinas" se podrá acceder a un listado de todas las máquinas habilitadas y datos como la mac y la IP de cada una de esas interfaces.
 <p align="center">
-  <img src="https://iaas.ull.es/ovirtadmin/usuarios/mismaquinas/"/>
+  <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/screen2.png"/>
 </p>
 
 En realidad no tendría que venir marcado ya directamente la relación nic/ens, pero en este caso ya se ha tomado la molestia de anotar, y así tenerlo siempre presente, a quién corresponde qué interfaz con la ayuda de tampermonkey, que no tiene que ver con esta práctica, pero con un script se puede modificar la vista del navegador para añadir más datos al hacer coincidir las mac que vemos con el comando ya mencionado para ver la información de las interfaces en la bash de debian.
