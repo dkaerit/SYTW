@@ -20,8 +20,8 @@ Nos dirigimos a la página del iaas de la universidad que es donde crearemos las
 ```
 Show advanced options -> General
 ```
-Para el proxy seleccionamos un DOC1(nic1) y un DOCINT1(nic2)
-Para el backend seleccionamos un DOCINT1(nic2) y un DOCINT(nic1)
-Para el backend únicamente agregamos una interfaz, pues sólo estara conectado al backend, ésta será DOCINT2(nic1)
+- Para el proxy seleccionamos un DOC1(nic1) y un DOCINT1(nic2)
+- Para el backend seleccionamos un DOCINT1(nic2) y un DOCINT(nic1)
+- Para el backend únicamente agregamos una interfaz, pues sólo estara conectado al backend, ésta será DOCINT2(nic1)
 
 Esto se hace para el DOCINT de cada máquina quede emparejado sin aportar ningún error.
