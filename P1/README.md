@@ -69,4 +69,10 @@ Y debería modificarse el fichero hasta tener algo como esto
 
 El dhcp que viene por defecto no lo tocamos, pero añadimos una entrada para el ens3 con la información dispuesta en el esquema del principio. Repetimos la misma mecánica en el resto de máquinas.
 
+<p align="center">
+  <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/screen_backend.png"/>
+</p>
+<p align="center">
+  <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/screen_bdd.png"/>
+</p>
 
