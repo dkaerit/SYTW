@@ -27,8 +27,8 @@ Show advanced options -> General
 *Esto se hace para el DOCINT de cada máquina quede emparejado sin aportar ningún error.*
 
 Ahora entramos en cada una de las máquinas y configuraremos sus interfaces. Para saber el estado de las mismas usamos el comando
-```
-ip a
+```console
+$ ip a
 ```
 <p align="center">
   <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/captu1.png"/>
@@ -43,3 +43,10 @@ Si vamos a la página del iaas sección "/mismaquinas" se podrá acceder a un li
 </p>
 
 En realidad no tendría que venir marcado ya directamente la relación nic/ens, pero en este caso ya se ha tomado la molestia de anotar, y así tenerlo siempre presente, a quién corresponde qué interfaz con la ayuda de tampermonkey, que no tiene que ver con esta práctica, pero con un script se puede modificar la vista del navegador para añadir más datos al hacer coincidir las mac que vemos con el comando ya mencionado para ver la información de las interfaces en la bash de debian.
+
+## Editando los ficheros de configuración de interfaces
+Antes de entrar en cuestión, algo que resulta importante para no despistarnos en las distintas sesiones es cambiar el hostname de las máquinas y así saber onde uno se encuentra en cada momento. El comando que usaremos para ello es:
+```console
+$ sudo hostnamectl set-hostname linuxize
+```
+
