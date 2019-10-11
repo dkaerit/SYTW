@@ -75,7 +75,26 @@ $ sudo npm i
 ```
 Y auqneue s opcional, es recomendable instalar un módulo llamado *nodemon* que nos facilitará el tener que arrancar la máquina cada vez que se crashee, pues ésta consigue levantar la app escuchando los cambios en el fichero constantemente. 
 
-Habrá que cambiar una serie de datos para que la aplicación pueda escucchar en la IP que nos interesa con el puerto 3000.
+Habrá que cambiar una serie de datos para que la aplicación pueda escucchar en la IP que nos interesa (172.16.16.2) con el puerto 3000.
+
+<p align="center">
+  <img src="https://i.imgur.com/fUJnU3k.png"/>
+</p>
+<p align="center">
+  <img src="https://i.imgur.com/boKqkIr.png"/>
+</p>
+
+¡Nota!: Es importante tener en cuenta que la mayoría de las veces hay que especificar la *ip* en lgar de utilizar la primero que pille de forma automatica haciendo uso de *ip.address()* pues en este caso cogía la ip que era, pero muchas otras veces podría no pasar y en su lugar habría que poner *'172.16.16.2'*
+
+Arrancamos la aplicación de alguna de estas formas (las dos últimas hay que configurarlas en el *package.json*, que fue lo que se usó aquí para hacer uso de un alias y no tener que estar recurriendo al nombre de node o nodemon en caso de haberlo instalado)
+```
+node hello.js
+nodemon hello.js
+npm start
+npm run dev
+```
+
+luego podemos visualizarlo en el navegador:
 
 
 ## (En la BDD) Configuración MongoDB
