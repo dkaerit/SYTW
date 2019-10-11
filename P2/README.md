@@ -79,5 +79,45 @@ Habrá que cambiar una serie de datos para que la aplicación pueda escucchar en
 
 
 ## (En la BDD) Configuración MongoDB
+```console
+$ sudo apt update
+$ sudo echo "deb http://repo.mongodb.org/apt/debian stretch/mongodb-org/4.2 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+$ sudo apt-get update
+$ sudo apt install mongodb-org -y
+```
+
+en */etc/systemd/system/mongodb.service*
+(insertar imagen de configuración)
+```
+$ sudo systemctl enable mongodb
+```
+
+en */etc/mongod.conf*
+(insertar imagen de configuración)
+```
+$ sudo systemctl start mongodb
+$ mongo
+```
+
+Crearemos nuestra base de datos con usuario con permisos de lectura y escritura (nuestro usuario admin). Similar al usuario postgres que actua como super usuario del sistema gestor de postgresql.
+```
+> use admin
+> db.createUser({user: "dbadmin", pwd: "secretpass", roles:[{role: "root", db: "admin"}]})
+```
+
+Paramos mongodb y lo volvemos a iniciar. Iniciamos sesión luego a la shell de mongo como usuarioa admin
+```
+$ mongo -u "dbadmin" -p "secretpass" --authenticationDatabase "admin"
+```
+
+Si no dio error todo salió perfecto. Crearemos ahora una base de datos que será la que se comunique con la aplicación del backend desde esta nuestra sesión con la shell identificasos como dbadmin en admin.
+```
+> use db01
+switched to db db01
+> db.createUser({user: "james", pwd: "pass", roles: ["readWrite"]})
+Successfully added user: { "user" : "james", "roles" : [ "readWrite" ] }
+```
+Se habrá de recordar estos datos pues serán los que se van a usar en nuestra aplicación MEAN
 
 ## (Backend y BDD) Montaje NFS
+
