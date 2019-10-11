@@ -132,7 +132,7 @@ Pero se nos pide, además que sea versión 4, por tanto hay que hacer unos liger
 y */etc/default/nfs-kernel-server*
 (insertar imagen)
 
-Creamos la carpeta a cmpartir
+Creamos la carpeta a compartir
 ```
 $ cd $HOME
 $ mkdir share
@@ -143,8 +143,21 @@ $ sudo chmod 777 share
 Editamos */etc/exports*
 (insertar aquí imagen de la configuración)
 
+```
+exportfs -ra
+```
+Así exportamos directorios especificados en el fichero sin necesidad de reiniciar los servicios NFS.
+- *-r* — Provoca que todos los directorios listados en /etc/exports sean exportados construyendo una nueva lista de exportación en /etc/lib/nfs/xtab. Esta opción refresca la lista de exportación con cualquier cambio que hubiéramos realizado en /etc/exports.
+- *-a* — Provoca que todos los directorios sean exportados o no, dependiendo de qué otras opciones hemos pasado a /usr/sbin/exportfs. Si no se pasan otras opciones, /usr/sbin/exportfs exporta todos los sistemas de archivos especificados en /etc/exports.
+
 ### Sesión de backend (cliente iportación)
 Instalamos NFS dedicado a importar
 ```
 $ apt-get -y install nfs-common
 ```
+
+Editaremos el fichero */etc/fstab* para configurar montajes en el arranque.
+(insertar aquí imagen de fstab)
+
+
+Reiniciamos el servicio (puede tardar un poco debido al nfs v4) y listo.
