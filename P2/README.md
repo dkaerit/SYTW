@@ -35,6 +35,17 @@ Lo que nosotros tenemos que hacer ahora es configurar nginx para que pueda trata
 
 Con dicha configuración hacemos que escuche cualquier IP en el puerto 80 y redirija con proxy_pass a nuestra interfaz del backend que *comparte network* con el proxy.
 
+Luego tenemos que desvincular el fichero al que por defecto nginx tiene vinculado. Nos dirigimos a la carpeta *sites-enabled* y dentro de esta ejecutamos la siguiente instrucción.
+```
+$ unlink default
+```
+Aunque borrarlo también serviría. Lo importante viene ahora para vincular nuestro nuevo fichero.
+```
+$ ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled
+```
+
+
+
 ## (En el backend) Configuración NodeJS
 
 ## (En la BDD) Configuración MongoDB
