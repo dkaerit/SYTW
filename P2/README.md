@@ -113,9 +113,7 @@ $ mongo -u "dbadmin" -p "secretpass" --authenticationDatabase "admin"
 Si no dio error todo salió perfecto. Crearemos ahora una base de datos que será la que se comunique con la aplicación del backend desde esta nuestra sesión con la shell identificasos como dbadmin en admin.
 ```
 > use db01
-switched to db db01
 > db.createUser({user: "james", pwd: "pass", roles: ["readWrite"]})
-Successfully added user: { "user" : "james", "roles" : [ "readWrite" ] }
 ```
 Se habrá de recordar estos datos pues serán los que se van a usar en nuestra aplicación MEAN
 
@@ -127,6 +125,12 @@ Instalamos NFS dedicado a exportar
 ```
 $ sudo apt-get install -y nfs-kernel-server
 ```
+Pero se nos pide, además que sea versión 4, por tanto hay que hacer unos ligeros cambios en los ficheros
+*/etc/default/nfs-common*
+(insertar imagen)
+
+y */etc/default/nfs-kernel-server*
+(insertar imagen)
 
 Creamos la carpeta a cmpartir
 ```
