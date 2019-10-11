@@ -171,6 +171,7 @@ Editamos */etc/exports*
 <p align="center">
   <img src="https://i.imgur.com/AfVC8hB.png"/>
 </p>
+
 - *rw* — El directorio será compartido en lectura y escritura (rw).
 - *sync* — Comunica al usuario los cambios realizados sobre los archivos cuando realmente se han ejecutado y es la opción recomendada.
 - *no_root_squash* — desactiva la opción anterior, es decir, los accesos realizados como root desde el cliente serán también de root en el servidor NFS.
@@ -193,6 +194,7 @@ Editaremos el fichero */etc/fstab* para configurar montajes en el arranque.
 <p align="center">
   <img src="https://i.imgur.com/tLd1alv.png"/>
 </p>
+
 -type=nfs
 - options
   - rw, lectura/escritura
