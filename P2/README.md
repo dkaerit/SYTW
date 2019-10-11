@@ -69,7 +69,14 @@ $ npm install express
 
 Ya tenemos lo necesario para desplegar nuetsra aplicación, ahora lo suyo será ejecutar una. En este caso nos serviremos de un [ejemplo de un repositorio github](https://github.com/crguezl/express-start). Que si bien podemos descargarlo y subirlo  nuestra máquina si disponemos de un sistema de montajes como es *ssfh* para windows (un método más cómodo) lo normal es hacerlo por git clone, o incluso hay quien lo sube con scp. El caso es que hay múltiples maneras así que cada quien elige la suya. 
 
-Una vez tengamos subida la aplicación
+Una vez tengamos subida la aplicación en la dirección de nuestro home *($HOME/express-start)* nos dirigimos a su ubicación e instalamos sus paquetes
+```
+$ sudo npm i
+```
+Y auqneue s opcional, es recomendable instalar un módulo llamado *nodemon* que nos facilitará el tener que arrancar la máquina cada vez que se crashee, pues ésta consigue levantar la app escuchando los cambios en el fichero constantemente. 
+
+Habrá que cambiar una serie de datos para que la aplicación pueda escucchar en la IP que nos interesa con el puerto 3000.
+
 
 ## (En la BDD) Configuración MongoDB
 
