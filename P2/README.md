@@ -43,6 +43,10 @@ Aunque borrarlo también serviría. Lo importante viene ahora para vincular nues
 ```
 $ ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled
 ```
+Y al tratar de obtener una lectura deberíamos tener esto:
+<p align="center">
+  <img src="https://imgur.com/xwT7zjm"/>
+</p>
 
 
 
