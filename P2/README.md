@@ -171,10 +171,10 @@ Editamos */etc/exports*
 <p align="center">
   <img src="https://i.imgur.com/AfVC8hB.png"/>
 </p>
-- *rw*: El directorio será compartido en lectura y escritura (rw).
-- *sync*: Comunica al usuario los cambios realizados sobre los archivos cuando realmente se han ejecutado y es la opción recomendada.
-- *no_root_squash*: desactiva la opción anterior, es decir, los accesos realizados como root desde el cliente serán también de root en el servidor NFS.
-- *no_subtree_check*: permite que no se compruebe el camino hasta el directorio que se exporta, en el caso de que el usuario no tenga permisos sobre el directorio exportado.
+- *rw* — El directorio será compartido en lectura y escritura (rw).
+- *sync* — Comunica al usuario los cambios realizados sobre los archivos cuando realmente se han ejecutado y es la opción recomendada.
+- *no_root_squash* — desactiva la opción anterior, es decir, los accesos realizados como root desde el cliente serán también de root en el servidor NFS.
+- *no_subtree_check* — permite que no se compruebe el camino hasta el directorio que se exporta, en el caso de que el usuario no tenga permisos sobre el directorio exportado.
 
 ```
 exportfs -ra
