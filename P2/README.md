@@ -195,7 +195,7 @@ Editaremos el fichero */etc/fstab* para configurar montajes en el arranque.
   <img src="https://i.imgur.com/tLd1alv.png"/>
 </p>
 
--type=nfs
+- type=nfs
 - options
   - rw, lectura/escritura
   - sync, entrada/salida de manera síncrona
