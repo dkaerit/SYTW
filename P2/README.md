@@ -29,7 +29,11 @@ $ sudo systemctl enable nginx
 
 Lo que nosotros tenemos que hacer ahora es configurar nginx para que pueda tratar las IPs que le llegan por el puerto 80 y enviar la solicitud al puerto de escucha del backend (que según nuestro esquema de la práctica anterior es 172.16.16.2). Para ello editaremos el fichero ubicado en /etc/nginx/sites-available
 
-[img](https://i.imgur.com/Bru2MI5.png)
+<p align="center">
+  <img src="https://i.imgur.com/Bru2MI5.png"/>
+</p>
+
+Con dicha configuración hacemos que escuche cualquier IP en el puerto 80 y
 
 ## (En el backend) Configuración NodeJS
 
