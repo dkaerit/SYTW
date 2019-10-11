@@ -95,6 +95,9 @@ npm run dev
 ```
 
 luego podemos visualizarlo en el navegador:
+<p align="center">
+  <img src="https://i.imgur.com/bQyHF3L.png"/>
+</p>
 
 
 ## (En la BDD) Configuración MongoDB
@@ -168,7 +171,10 @@ Editamos */etc/exports*
 <p align="center">
   <img src="https://i.imgur.com/AfVC8hB.png"/>
 </p>
-
+- *rw*: El directorio será compartido en lectura y escritura (rw).
+- *sync*: Comunica al usuario los cambios realizados sobre los archivos cuando realmente se han ejecutado y es la opción recomendada.
+- *no_root_squash*: desactiva la opción anterior, es decir, los accesos realizados como root desde el cliente serán también de root en el servidor NFS.
+- *no_subtree_check*: permite que no se compruebe el camino hasta el directorio que se exporta, en el caso de que el usuario no tenga permisos sobre el directorio exportado.
 
 ```
 exportfs -ra
@@ -184,7 +190,18 @@ $ apt-get -y install nfs-common
 ```
 
 Editaremos el fichero */etc/fstab* para configurar montajes en el arranque.
-(insertar aquí imagen de fstab)
+<p align="center">
+  <img src="https://i.imgur.com/tLd1alv.png"/>
+</p>
+-type=nfs
+- options
+  - rw, lectura/escritura
+  - sync, entrada/salida de manera síncrona
+  - hard, especifica que si el programa que usa un archivo vía una conexión NFS, debe parar y esperar.
+  - intr, permite que se interrumpan las peticiones NFS si el servidor se cae o no puede ser accedido.
+- dump=0, no se toma en cuenta el dispositivo para hacer respaldo del sistema de archivos por el comando dump
+- pass=0,  la aplicación fsck no revisará la partición en busca de errores durante el inicio.
 
+(Nota, se puede añadir la máscara, pero al reiniciarse la máquina puede que reescriba el fichero *fstab* quitándolo al tomarlo como redundante.)
 
 Reiniciamos el servicio (puede tardar un poco debido al nfs v4) y listo.
