@@ -48,7 +48,7 @@ Y al tratar de obtener una lectura deberíamos tener esto:
   <img src="https://i.imgur.com/xwT7zjm.png"/>
 </p>
 
-
+Ya podemos pasar a configurar el backend.
 
 ## (En el backend) Configuración NodeJS
 
