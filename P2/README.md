@@ -106,13 +106,19 @@ $ sudo apt install mongodb-org -y
 ```
 
 en */etc/systemd/system/mongodb.service*
-(insertar imagen de configuración)
+<p align="center">
+  <img src="https://i.imgur.com/6dmEqCo.png"/>
+</p>
+
 ```
 $ sudo systemctl enable mongodb
 ```
 
 en */etc/mongod.conf*
-(insertar imagen de configuración)
+<p align="center">
+  <img src="https://i.imgur.com/9GRxltG.png"/>
+</p>
+
 ```
 $ sudo systemctl start mongodb
 $ mongo
@@ -145,11 +151,10 @@ Instalamos NFS dedicado a exportar
 $ sudo apt-get install -y nfs-kernel-server
 ```
 Pero se nos pide, además que sea versión 4, por tanto hay que hacer unos ligeros cambios en los ficheros
-*/etc/default/nfs-common*
-(insertar imagen)
-
-y */etc/default/nfs-kernel-server*
-(insertar imagen)
+*/etc/default/nfs-common* y */etc/default/nfs-kernel-server*
+<p align="center">
+  <img src="https://i.imgur.com/aIrE1AF.png"/>
+</p>
 
 Creamos la carpeta a compartir
 ```
@@ -160,7 +165,10 @@ $ sudo chmod 777 share
 ```
 
 Editamos */etc/exports*
-(insertar aquí imagen de la configuración)
+<p align="center">
+  <img src="https://i.imgur.com/AfVC8hB.png"/>
+</p>
+
 
 ```
 exportfs -ra
