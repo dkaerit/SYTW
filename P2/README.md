@@ -120,4 +120,27 @@ Successfully added user: { "user" : "james", "roles" : [ "readWrite" ] }
 Se habrá de recordar estos datos pues serán los que se van a usar en nuestra aplicación MEAN
 
 ## (Backend y BDD) Montaje NFS
+Aquí tenemos que tener una visión dividida. Pues en la BDD vamos a exportar una carpeta compartida y el backend actuará de cliente para importar el contenido de la carpeta exportada.
 
+### Sesión de BDD (servidor exportación)
+Instalamos NFS dedicado a exportar
+```
+$ sudo apt-get install -y nfs-kernel-server
+```
+
+Creamos la carpeta a cmpartir
+```
+$ cd $HOME
+$ mkdir share
+$ sudo chown root share 
+$ sudo chmod 777 share
+```
+
+Editamos */etc/exports*
+(insertar aquí imagen de la configuración)
+
+### Sesión de backend (cliente iportación)
+Instalamos NFS dedicado a importar
+```
+$ apt-get -y install nfs-common
+```
