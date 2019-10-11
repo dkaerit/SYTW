@@ -62,12 +62,14 @@ Luego completamos la instalación con el gestor de paquetes de node *npm* (algo 
 # apt install build-essential libssl-dev
 ```
 
-Lo normal es que los paquetes deban ser instalados dentro de los proyectos, a menos que se especifiquen que sean globales "-g" en cuyo caso se instalarán en un directorio del que node se encargará de leer para cada aplicación que exista en esa máquina y no haya que instalarlos manualmente. Express es uno de ellos. Es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node populares. Proporciona mecanismos para:
+Lo normal es que los paquetes deban ser instalados dentro de los proyectos, a menos que se especifiquen que sean globales "-g" en cuyo caso se instalarán en un directorio del que node se encargará de leer para cada aplicación que exista en esa máquina y no haya que instalarlos manualmente. Express es uno de ellos. Es el framework web más popular de Node, y es la librería subyacente para un gran número de otros frameworks web de Node populares. Proporciona mecanismos para utilidades HTTP. Así pues, es requerido instalarlo.
+```
+$ npm install express
+```
 
-- Escritura de manejadores de peticiones con diferentes verbos HTTP en diferentes caminos URL (rutas).
-- Integración con motores de renderización de "vistas" para generar respuestas mediante la introducción de datos en plantillas.
-- Establecer ajustes de aplicaciones web como qué puerto usar para conectar, y la localización de las plantillas que se utilizan para renderizar la respuesta.
-- Añadir procesamiento de peticiones "middleware" adicional en cualquier punto dentro de la tubería de manejo de la petición.
+Ya tenemos lo necesario para desplegar nuetsra aplicación, ahora lo suyo será ejecutar una. En este caso nos serviremos de un [ejemplo de un repositorio github](https://github.com/crguezl/express-start). Que si bien podemos descargarlo y subirlo  nuestra máquina si disponemos de un sistema de montajes como es *ssfh* para windows (un método más cómodo) lo normal es hacerlo por git clone, o incluso hay quien lo sube con scp. El caso es que hay múltiples maneras así que cada quien elige la suya. 
+
+Una vez tengamos subida la aplicación
 
 ## (En la BDD) Configuración MongoDB
 
