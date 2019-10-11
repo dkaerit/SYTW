@@ -148,7 +148,7 @@ exportfs -ra
 ```
 Así exportamos directorios especificados en el fichero sin necesidad de reiniciar los servicios NFS.
 - *-r* — Provoca que todos los directorios listados en /etc/exports sean exportados construyendo una nueva lista de exportación en /etc/lib/nfs/xtab. Esta opción refresca la lista de exportación con cualquier cambio que hubiéramos realizado en /etc/exports.
-- *-a* — Provoca que todos los directorios sean exportados o no, dependiendo de qué otras opciones hemos pasado a /usr/sbin/exportfs. Si no se pasan otras opciones, /usr/sbin/exportfs exporta todos los sistemas de archivos especificados en /etc/exports.
+- *-a* — Exporta todos los sistemas de archivos especificados en /etc/exports.
 
 ### Sesión de backend (cliente iportación)
 Instalamos NFS dedicado a importar
