@@ -45,7 +45,7 @@ $ ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled
 ```
 Y al tratar de obtener una lectura deberíamos tener esto:
 <p align="center">
-  <img src="https://imgur.com/xwT7zjm"/>
+  <img src="https://i.imgur.com/xwT7zjm.png"/>
 </p>
 
 
