@@ -22,10 +22,10 @@ $ ssh git@github.com
 Clonamos nuestro repo en el directorio que queramos.
 
 ```console
-$ git clone https://github.com/SyTW2019/E01.git
+$ git clone git@github.com:SyTW2019/E01.git
 ```
 <p align="center">
-  <img src="https://i.imgur.com/y5SI6AZ.png"/>
+  <img src="https://i.gyazo.com/483fe5732abb03d78a903d0f88608c25.png"/>
 </p>
 
 ## Ejercicios de merge entre ramas
