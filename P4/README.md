@@ -28,9 +28,10 @@ $ git clone git@github.com:SyTW2019/E01.git
   <img src="https://i.gyazo.com/483fe5732abb03d78a903d0f88608c25.png"/>
 </p>
 
+
 ## Ejercicios de merge entre ramas
 <p align="center">
-  <img src="https://i.imgur.com/RfjtTWL.png"/>
+  <img src="https://i.gyazo.com/7710a99b95a032da85bdd2c97dbb1055.png"/>
 </p>
 
 
