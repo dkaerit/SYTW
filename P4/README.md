@@ -6,6 +6,10 @@ GRADO EN INGENIERÍA INFORMÁTICA — ULL
 # Ejercicios con el repositorio del proyecto
 ## Clonar el repositorio
 
-https://i.imgur.com/y5SI6AZ.png
+
+
+<p align="center">
+  <img src="https://i.imgur.com/y5SI6AZ.png"/>
+</p>
 ## Ejercicios de merge entre ramas
 ## Pruebas con la aplicacion bitname
