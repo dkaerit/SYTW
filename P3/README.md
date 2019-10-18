@@ -27,7 +27,7 @@ $ sudo ./run.sh start
 ```
 
 <p align="center">
-  <img src="https://i.imgur.com/5J9l3LL.png"/>
+  <img src="https://i.imgur.com/EUXNVzX.png"/>
 </p>
 
 ## Clonado de la MV Backend
