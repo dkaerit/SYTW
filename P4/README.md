@@ -27,5 +27,7 @@ $ git clone https://github.com/SyTW2019/E01.git
 <p align="center">
   <img src="https://i.imgur.com/y5SI6AZ.png"/>
 </p>
+
 ## Ejercicios de merge entre ramas
+
 ## Pruebas con la aplicacion bitname
