@@ -30,6 +30,18 @@ $ git clone git@github.com:SyTW2019/E01.git
 
 
 ## Ejercicios de merge entre ramas
+Lo que viene a contnuación es una practica común para un caso en el que se quiere crear, por ejemplo un fichero, pero se quiere mantener actualizado el branch de lo que hay en el master.
+```
+$ git brach monnizou
+$ git checkout monnizou
+(editando)
+$ git add *
+$ git commit -m "aquí un resumen del cambio realizado"
+$ git merge master
+$ git checkout master
+$ git merge monnizou
+```
+Lo que se está haciendo es chear el branch monnizou donde se trabajará de forma que no se afecte al master, luego nos movemos al branch, editamos lo que queramos, preparamos los ficheros y hacemos un commit (actualizamos los cambios en el branch) unimos lo que haya en el master en ese momento a nuestros cambios, para que nada se pierda si se ha hecho algo nuevo en el master, nos movemos al master y unimos lo que nosotros hayamos hecho el branch, hacemos un push. y listo.
 <p align="center">
   <img src="https://i.gyazo.com/7710a99b95a032da85bdd2c97dbb1055.png"/>
 </p>
