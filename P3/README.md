@@ -17,3 +17,7 @@ GRADO EN INGENIERÍA INFORMÁTICA — ULL
 
 ## Clonado de la MV Backend
 ## Configurar el proxy como sistema de balanceo de carga
+
+<p align="center">
+  <img src="https://i.imgur.com/Y3qilVW.png"/>
+</p>
