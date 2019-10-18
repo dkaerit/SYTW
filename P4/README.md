@@ -51,3 +51,8 @@ Lo que se está haciendo es chear el branch monnizou donde se trabajará de form
 </p>
 
 ## Pruebas con la aplicacion bitname
+Se puede ver que la aplicación bitnami ya ha sido copiada por los compañeros de equipo tras tener todos esos ficheros correspondientes a la aplicación desde que hacemos el clone. Sin embargo podíamos hacerlo aunque se sobre escriba. Básicamente sería como vimos, nos clonamos la aplicación en nuestro branch y aplicamos los cambios con el método de trabajo git (teniendo cuidado de mantenernos actualizados del master) y hacemos un push de los ficheros incorporados. 
+
+<p align="center">
+  <img src="https://i.gyazo.com/acd9a983565e910f11885934300aeb5f.png"/>
+</p>
