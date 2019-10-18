@@ -34,5 +34,8 @@ $ git clone git@github.com:SyTW2019/E01.git
   <img src="https://i.gyazo.com/7710a99b95a032da85bdd2c97dbb1055.png"/>
 </p>
 
+<p align="center">
+  <img src="https://i.gyazo.com/e062cd0f68d8ed0f46db7bce605c90dc.png"/>
+</p>
 
 ## Pruebas con la aplicacion bitname
