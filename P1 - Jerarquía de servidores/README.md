@@ -11,7 +11,7 @@ Una visual de lo que queremos conseguir es lo siguiente.
 
 
 <p align="center">
-  <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/diagram.png"/>
+  <img src="https://github.com/dkuroi/SYTW/blob/master/P1/imgs/diagram.png"/>
 </p>
 
 ## Creando las máquinas virtuales
@@ -31,7 +31,7 @@ Ahora entramos en cada una de las máquinas y configuraremos sus interfaces. Par
 $ ip a
 ```
 <p align="center">
-  <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/captu1.png"/>
+  <img src="https://github.com/dkuroi/SYTW/blob/master/P1/imgs/captu1.png"/>
 </p>
 Aquí vemos que hay 3 interfaces habilitadas, el loopback, que no lo tocaremos el ens3 y el ens6 (en la captura se ven que están activas porque ya las levanté al realizar la práctica, pero inicialmente estará una de ellas baja sin IP asignada). 
 
@@ -39,7 +39,7 @@ Otro dato importante es que no sabemos a qué interfaz se refiere cada una de la
 
 Si vamos a la página del iaas sección "/mismaquinas" se podrá acceder a un listado de todas las máquinas habilitadas y datos como la mac y la IP de cada una de esas interfaces.
 <p align="center">
-  <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/screen2.png"/>
+  <img src="https://github.com/dkuroi/SYTW/blob/master/P1/imgs/screen2.png"/>
 </p>
 
 En realidad no tendría que venir marcado ya directamente la relación nic/ens, pero en este caso ya se ha tomado la molestia de anotar, y así tenerlo siempre presente, a quién corresponde qué interfaz con la ayuda de tampermonkey, que no tiene que ver con esta práctica, pero con un script se puede modificar la vista del navegador para añadir más datos al hacer coincidir las mac que vemos con el comando ya mencionado para ver la información de las interfaces en la bash de debian.
@@ -64,7 +64,7 @@ $ nano /etc/network/interfaces
 Y debería modificarse el fichero hasta tener algo como esto
 
 <p align="center">
-  <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/proxy_screen.png"/>
+  <img src="https://github.com/dkuroi/SYTW/blob/master/P1/imgs/proxy_screen.png"/>
 </p>
 
 El dhcp que viene por defecto no lo tocamos, pero añadimos una entrada para el ens3 con la información dispuesta en el esquema del principio. Para cada interfaz modificada habrá que bajar dicha interfaz y levantarla (O sólo levantarla si ya está DOWN). Los comandos para estas dos órdenes son.
@@ -80,10 +80,10 @@ $ ifconfig
 Repetimos la misma mecánica en el resto de máquinas.
 
 <p align="center">
-  <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/screen_backend.png"/>
+  <img src="https://github.com/dkuroi/SYTW/blob/master/P1/imgs/screen_backend.png"/>
 </p>
 <p align="center">
-  <img src="https://github.com/monnizou/SYTW/blob/master/P1/imgs/screen_bdd.png"/>
+  <img src="https://github.com/dkuroi/SYTW/blob/master/P1/imgs/screen_bdd.png"/>
 </p>
 
 Al final deberíamos poder hacer ping entre el proxy y el backend y entre el backend y la base de datos sin nigún problema. Si esto no es posible puede deberse a algun dato mal indicado en los ficheros de configuración o simplemente no se llegaron a reiniciar correctamente los servicios de red con los nuevos datos
